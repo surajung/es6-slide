@@ -18,11 +18,15 @@ slideData.forEach((v, i) => {
     $container.appendChild($li)
 })
 $slide.appendChild($container)
-.addEventListener('click', e => {
-    e.preventDefault()
-    currentIndex = (currentIndex + 1) % slideData.length
-    $container.style.left = -100 * currentIndex + 'px'
-})
+    .addEventListener('click', e => {
+        e.preventDefault()
+        currentIndex = (currentIndex + 1) % slideData.length
+        $container.style.left = -100 * currentIndex + 'px'
+    })
 
 frag.appendChild($slide)
 $div.appendChild(frag)
+
+document.body.innerHTML = `<div id="a"></div><div id="b"></div><div id="c"></div><div id="d"></div>`
+buildSlide(document.getElementById('a'), [1, 2, 3, 4, 5])
+buildSlide(document.getElementById('b'), ['a', ''])
