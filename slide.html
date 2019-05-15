@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .slide {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            margin: 10px;
+        }
+        
+        .slide__container {
+            position: absolute;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            left: 0;
+            top: 0;
+            transition: ease-out .5s;
+        }
+        
+        .slide__item {
+            float: left;
+            width: 100px;
+            height: 100px;
+            font-size: 30px;
+            text-align: center;
+            line-height: 30px;
+        }
+        
+        .slide__item:nth-child(5n+1) {
+            background-color: #ffa;
+        }
+        
+        .slide__item:nth-child(5n+2) {
+            background-color: #faf;
+        }
+        
+        .slide__item:nth-child(5n+3) {
+            background-color: #aff;
+        }
+        
+        .slide__item:nth-child(5n+4) {
+            background-color: #faa;
+        }
+        
+        .slide__item:nth-child(5n) {
+            background-color: #afa;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="slide1.js"></script>
+</body>
+
+</html>
